@@ -1,26 +1,30 @@
-import camper_schema from './camperSchema.js';
-import confirmation_page_template from './confirmationPageTemplate.js';
-//import pre_submit_template from './preSubmitTemplate.js';
-import pricing from './pricing/pricing.js';
-import registration_pricing_logic from './pricing/registrationPricingLogic.js';
-import camper_pricing_logic from './pricing/camperPricingLogic.js';
-import registration_schema from './registrationSchema.js';
-import registration_types from './registrationTypes.js';
-import registration_ui_schema from './registrationUISchema.js';
-import registration_deposit_schema from './registrationDepositSchema.js';
-//import lodgings from './lodgings.js';
-import reports from './reports.js';
-// import makeRegistrations from './testRegistrations.js';
-import { dates, lengthInDays, year } from './dates.js';
+import {
+  type EventImport,
+  type EventModule,
+} from '../eventImportObjectSchema.ts';
+import camper_schema from './camperSchema.ts';
+import confirmation_page_template from './confirmationPageTemplate.ts';
+//import pre_submit_template from './preSubmitTemplate.ts';
+import pricing from './pricing/pricing.ts';
+import registration_pricing_logic from './pricing/registrationPricingLogic.ts';
+import camper_pricing_logic from './pricing/camperPricingLogic.ts';
+import registration_schema from './registrationSchema.ts';
+import registration_types from './registrationTypes.ts';
+import registration_ui_schema from './registrationUISchema.ts';
+import registration_deposit_schema from './registrationDepositSchema.ts';
+//import lodgings from './lodgings.ts';
+import reports from './reports.ts';
+// import makeRegistrations from './testRegistrations.ts';
+import { dates, lengthInDays, year } from './dates.ts';
 
 import {
   confirmation_email_template,
   confirmation_email_subject,
-} from './confirmationEmailTemplate.js';
+} from './confirmationEmailTemplate.ts';
 
 export const eventName = `Family Week ${year}`;
 
-const data = {
+const data: EventImport = {
   organization: 'BACDS',
   event: {
     name: eventName,
@@ -68,4 +72,4 @@ if (process.env.PAYPAL_CLIENT_ID) {
 export default {
   data,
   //sampleRegGenerator,
-};
+} satisfies EventModule;

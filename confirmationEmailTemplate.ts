@@ -1,4 +1,4 @@
-import { year } from './dates.js';
+import { year } from './dates.ts';
 
 const subject = 'Family Week registration confirmation';
 

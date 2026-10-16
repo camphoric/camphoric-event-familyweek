@@ -1,3 +1,5 @@
+import type { OrganizationImport } from './index.ts';
+
 export default {
   organization: {
     name: 'BACDS',
@@ -14,4 +16,4 @@ export default {
     host: 'smtp.example.com',
     port: '587',
   },
-};
+} satisfies OrganizationImport;

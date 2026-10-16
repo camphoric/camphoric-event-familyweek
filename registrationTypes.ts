@@ -1,4 +1,4 @@
-const createEmailTemplate = label => `
+const createEmailTemplate = (label: string) => `
 Dear {{ invitation.recipient_name or invitation.recipient_email }},
 
 You have been invited to register for Family Week as ${label}.

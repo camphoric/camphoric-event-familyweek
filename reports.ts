@@ -1,3 +1,5 @@
+import type { Report } from '../eventImportObjectSchema.ts';
+
 // Every report renders on the server from Camphoric's variables (DR-41).
 export default [
   {
@@ -12,4 +14,4 @@ export default [
 {% endfor %}
 `,
   },
-];
+] satisfies Report[];
