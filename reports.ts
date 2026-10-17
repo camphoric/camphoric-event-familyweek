@@ -1,4 +1,4 @@
-import type { Report } from '../eventImportObjectSchema.ts';
+import type { Report } from 'camphoric-event-import-spec';
 
 // Every report renders on the server from Camphoric's variables (DR-41).
 export default [
