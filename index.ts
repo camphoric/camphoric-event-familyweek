@@ -65,9 +65,9 @@ if (process.env.PAYPAL_CLIENT_ID) {
 }
 
 //const sampleRegGenerator = async (fetch, results) => {
-  //const regs = makeRegistrations(results.lodging);
+//const regs = makeRegistrations(results.lodging);
 
-  //return regs;
+//return regs;
 //};
 
 export default {

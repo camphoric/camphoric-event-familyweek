@@ -1,6 +1,6 @@
 export default {
   'type': 'object',
-  'title': "Welcome to BACDS Family Week's Online Registration!",
+  'title': 'Welcome to BACDS Family Week\'s Online Registration!',
   'required': ['address', 'primary_phone', /*'payment_option'*/],
   'properties': {
     'address': {

@@ -62,7 +62,7 @@ Family Week Registrar
 1602 Addison St.   
 Berkeley, CA 94703
 
-Your registration is complete when we receive your payment. All payments must be received by May 1st. If you cancel before then, your payment will be refunded, less a \$25 per camper administration fee. If you cancel between May 1st and June 15th, 50% of your payment will be retained. Sorry, there will be no refunds for cancellations after June 15th. All cancellations must be made in writing or by email and take effect upon the day they're sent, but are final only when you receive acknowledgement from us. Registrations are not transferable. If you have to cancel due to COVID, we will offer you a full refund less a \$25 per camper administration fee.
+Your registration is complete when we receive your payment. All payments must be received by May 1st. If you cancel before then, your payment will be refunded, less a $25 per camper administration fee. If you cancel between May 1st and June 15th, 50% of your payment will be retained. Sorry, there will be no refunds for cancellations after June 15th. All cancellations must be made in writing or by email and take effect upon the day they're sent, but are final only when you receive acknowledgement from us. Registrations are not transferable. If you have to cancel due to COVID, we will offer you a full refund less a $25 per camper administration fee.
 
 If you have any questions, please contact registrar Katie Riemer at (510) 684-1454 or familyweek@bacds.org.
 

@@ -42,11 +42,11 @@ Please register before May 8th so we have enough people registered to hold camp.
 
 | &nbsp; | Adults (17+) | Teens (13-16) | Kids (6-12) | Kids (2-5) | Kids (0-1) |
 | --- | --- | --- | --- | --- | --- |
-| Price: | $900/$800\* | $700 | $600 | $250 | $0 |
+| Price: | $900/$800* | $700 | $600 | $250 | $0 |
 
 WORK TRADE: Adults may take a $250 and Teens may take a $200 reduction in fees in exchange for a work trade or workshop helper position. See [this page for details](https://www.bacds.org/familyweek/registration-notes/).
 
-\*The second price is a discount price for any additional adults, after the first adult in a family group, who are not receiving a work trade discount. Work trade discounts are always taken off of the full adult price.
+*The second price is a discount price for any additional adults, after the first adult in a family group, who are not receiving a work trade discount. Work trade discounts are always taken off of the full adult price.
 `;
 
 export default {

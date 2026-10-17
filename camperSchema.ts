@@ -58,4 +58,4 @@ export default {
       'title': 'Tell us about your housing preferences. Housing is assigned by age, youngest children first, to facilitate an age-group cabin-mate for each child. Every attempt will be made to accommodate housing requests. Please discuss any special needs below:',
     },
   },
-}
+};
