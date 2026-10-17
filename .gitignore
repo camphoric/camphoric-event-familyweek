@@ -1,6 +1,10 @@
-__pycache__
-*.json
-# a package's own config is not data
-!package.json
-!tsconfig.json
-!tsconfig.build.json
+node_modules/
+dist/
+*.tgz
+.env
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
