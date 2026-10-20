@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/camphoric/camphoric-event-familyweek/compare/v1.0.0...v1.0.1) (2026-10-20)
+
+
+### Bug Fixes
+
+* **build:** publish to and install from npm ([bedbbd7](https://github.com/camphoric/camphoric-event-familyweek/commit/bedbbd713e5cc828c909778cc4d2d478362c39aa))
+
 ## 1.0.0 (2026-10-17)
 
 
