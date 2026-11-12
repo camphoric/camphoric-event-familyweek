@@ -40,9 +40,13 @@ Locally the results are listed in the terminal; `npm run e2e -- --reporter=html`
 playwright show-report`, gives the HTML report (with traces) that CI uploads.
 
 - `CAMPHORIC_IMAGE_TAG` picks the release image's tag (default `latest`, pulled fresh);
-  `CAMPHORIC_E2E_IMAGE` names a locally built image instead.
-- `CAMPHORIC_E2E_SERVER_URL`, with `CAMPHORIC_E2E_SERVER_USERNAME` / `_PASSWORD`, imports into
-  a running server instead of starting one.
+  `CAMPHORIC_E2E_IMAGE` names a locally built image instead. The harness (import-tools 3) imports
+  with a personal access token it mints in the server, so the image must be Camphoric v0.18.0 or
+  later.
+- `CAMPHORIC_E2E_SERVER_URL`, with `CAMPHORIC_E2E_SERVER_TOKEN` (an Admin's personal access
+  token, from `manage.py camphoric_api_token create <user>` on that server), imports into a
+  running server instead of starting one. One that isn't local also needs
+  `CAMPHORIC_ALLOW_REMOTE=1`.
 - Every test, on desktop and mobile Chrome, shares the one imported event, so a registration one
   test completes stays.
 - The event's own registration window (2023) is opened in the imported copy, so the form can be
@@ -102,16 +106,17 @@ gh workflow run upstream.yml -f force=true
 ```
 
 To run CI or E2E by hand against a given image tag (a pre-release, say) or exact package
-versions:
+versions (an image of v0.18.0 or later, and import-tools 3.x: the harness mints an API token in
+the server, and earlier versions sign in with a password v0.18.0 refuses):
 
 ```bash
-gh workflow run e2e.yml -f image_tag=v0.15.0-rc.1
-gh workflow run e2e.yml -f spec_version=1.0.1 -f tools_version=1.2.1
-gh workflow run ci.yml -f spec_version=1.0.1 -f tools_version=1.2.1
+gh workflow run e2e.yml -f image_tag=v0.19.0-rc.1
+gh workflow run e2e.yml -f spec_version=1.2.0 -f tools_version=3.0.0
+gh workflow run ci.yml -f spec_version=1.2.0 -f tools_version=3.0.0
 ```
 
 A version outside this event's range works too, such as a new major or a pre-release
-(`-f tools_version=1.3.0-rc.1`): the run installs it over the range (with `--force` if a peer
+(`-f tools_version=4.0.0-rc.1`): the run installs it over the range (with `--force` if a peer
 range makes npm refuse it), checks the installed package's own version, and marks it `invalid` in
 the summary's `npm ls`. It must be an exact version, not a range or a tag. CI's smoke test
 installs the packed package with the `spec_version` given (`tools_version` doesn't apply, since
