@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/camphoric/camphoric-event-familyweek/compare/v1.0.1...v2.0.0) (2026-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** the e2e tests need a Camphoric image of v0.18.0 or later and CAMPHORIC_E2E_SERVER_TOKEN in place of CAMPHORIC_E2E_SERVER_USERNAME / _PASSWORD.
+
+### Bug Fixes
+
+* **deps:** import with Camphoric v0.18's personal access tokens ([2dd4228](https://github.com/camphoric/camphoric-event-familyweek/commit/2dd4228907c9569b4bbc0ce757c46b87ad8a7c57))
+
 ## [1.0.1](https://github.com/camphoric/camphoric-event-familyweek/compare/v1.0.0...v1.0.1) (2026-10-20)
 
 
