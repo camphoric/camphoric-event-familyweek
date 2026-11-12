@@ -29,15 +29,9 @@ test('the form opens', async ({ page, registration }) => {
   await expect(page.getByRole('heading', { name: 'Welcome to BACDS Family Week\'s Online Registration!' })).toBeVisible();
 });
 
-// On a phone the rates table (six columns) is wider than the screen, and so is
-// the whole page, so a tap can land on the wrong control. Expected to fail on
-// mobile until the Camphoric client fits wide tables to the screen; once this
-// passes there (failing the run as an unexpected pass), remove this
-// annotation and the WIDE_RATES_TABLE ones below.
-const WIDE_RATES_TABLE = 'the rates table is wider than a phone, so the page is too';
-
-test('the form fits the screen\'s width', async ({ page, registration, isMobile }) => {
-  test.fail(isMobile, WIDE_RATES_TABLE);
+// On a phone the rates table (six columns) mustn't make the page wider than the
+// screen, or a tap can land on the wrong control
+test('the form fits the screen\'s width', async ({ page, registration }) => {
   await registration.open();
   // (A string: this repository's TypeScript has no DOM types)
   const [scrollWidth, clientWidth] = await page.evaluate<number[]>(
@@ -77,16 +71,14 @@ test('a donation is added to the total', async ({ registration }) => {
   await registration.expectTotal(950);
 });
 
-test('a registration missing required answers isn\'t submitted', async ({ page, registration, isMobile }) => {
-  test.fixme(isMobile, WIDE_RATES_TABLE);
+test('a registration missing required answers isn\'t submitted', async ({ page, registration }) => {
   await registration.open();
   await registration.submit();
   await expect(registration.field('Street Address')).toHaveJSProperty('validity.valueMissing', true);
   await expect(page).toHaveURL(/\/register\/registration$/);
 });
 
-test('a registration goes through, paying by check', async ({ page, registration, isMobile }) => {
-  test.fixme(isMobile, WIDE_RATES_TABLE);
+test('a registration goes through, paying by check', async ({ page, registration }) => {
   await registration.open();
   await registration.fill('Registrant email', 'pat@example.com');
   await registration.fill('Street Address', '1 Example Way');
