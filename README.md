@@ -5,8 +5,10 @@ object (the registration form, pricing, emails and reports) and its organization
 
 It satisfies the contract in
 [`@camphoric/camphoric-event-import-spec`](https://github.com/camphoric/camphoric/tree/main/data/packages/event-import-spec),
-and Camphoric's importer (`data/` in the Camphoric repository) installs it from npm and
-imports it.
+and is published to npm. Camphoric's importer (`data/` in the Camphoric repository) doesn't
+install it (since v0.19.0 it holds only Sample Camp); to import it, install it there by hand
+(`npm install --no-save @camphoric/camphoric-event-familyweek`). Nor does Camphoric's CI test it:
+this repository's own workflows (below) do.
 
 ## Developing
 
@@ -110,9 +112,9 @@ versions (an image of v0.18.0 or later, and import-tools 3.x: the harness mints 
 the server, and earlier versions sign in with a password v0.18.0 refuses):
 
 ```bash
-gh workflow run e2e.yml -f image_tag=v0.19.0-rc.1
-gh workflow run e2e.yml -f spec_version=1.2.0 -f tools_version=3.0.0
-gh workflow run ci.yml -f spec_version=1.2.0 -f tools_version=3.0.0
+gh workflow run e2e.yml -f image_tag=v0.20.0-rc.1
+gh workflow run e2e.yml -f spec_version=1.3.0 -f tools_version=3.0.0
+gh workflow run ci.yml -f spec_version=1.3.0 -f tools_version=3.0.0
 ```
 
 A version outside this event's range works too, such as a new major or a pre-release
